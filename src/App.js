@@ -1,6 +1,6 @@
 import React from 'react';
 import Aside from "./components/Aside";
-import {BrowserRouter as Router,Route} from "react-router-dom";
+import {BrowserRouter as Router,Route,Redirect} from "react-router-dom";
 import Task from "./components/Task";
 import Project from "./components/Project";
 import Date from "./components/Date";
@@ -9,6 +9,7 @@ import Possibilities from "./components/Possibilities";
 const App = () => {
     return (
         <Router>
+            <Route path='/'><Redirect to='/project' /></Route>
             <Route exact path='/'><Aside /></Route>
             <Route  path='/task'><Task /></Route>
             <Route  path='/project'><Project /></Route>

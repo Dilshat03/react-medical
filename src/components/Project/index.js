@@ -41,7 +41,7 @@ const Project = () => {
                     {
                         gallery.map(el =>
                             <div className='card-project mt-8 '>
-                                <img src={el.image} alt=""/>
+                                <img src={el.image} alt="image"className='img-project'/>
                                 <div className='p-4'>
                                     <p>{el.title}</p>
                                     <p><i className='bx bx-calendar-alt'></i> {el.start_date} - {el.off_date}</p>
